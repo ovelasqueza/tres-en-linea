@@ -2,6 +2,7 @@ import { defineConfig, mergeConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig(async ({ mode }) => {
+  console.log('mode',mode);
   const config = await import(`./vite.config.${mode}.ts`);
 
   const defaults = defineConfig({
